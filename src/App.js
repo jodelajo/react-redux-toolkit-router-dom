@@ -2,6 +2,8 @@ import './App.css';
 import { Routes, Route, Link } from "react-router-dom";
 import Auth from './components/login/Auth';
 import Register from './components/Register';
+import Details from './components/Details';
+import Home from './components/Home';
 
 function App() {
   return (
@@ -10,12 +12,14 @@ function App() {
         <Link to='/'>Home</Link>
         <Link to="/registreren">Registreren</Link>
         <Link to="/inloggen">Inloggen</Link>
+        <Link to="/details">Details</Link>
       </nav>
-    <h1>Welkom op dit fantastische inlog form</h1>
+   
      <Routes>
-       <Route path="/"  />
+       <Route path="/"  element={ <Home/>}/>
        <Route path="/inloggen" element={<Auth />}  />
        <Route path="/registreren" element={<Register />}  />
+       <Route path="/details" element={<Details />}  />
 
 
      </Routes>

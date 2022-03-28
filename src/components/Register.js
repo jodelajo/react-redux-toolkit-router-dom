@@ -1,10 +1,9 @@
 import React from 'react'
-import LoginForm from './login/LoginForm'
-
+import Auth from './login/Auth'
 function Register() {
     return (
         <div>
-            <LoginForm />
+            <Auth />
         </div>
     )
 }

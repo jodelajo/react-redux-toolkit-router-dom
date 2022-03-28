@@ -3,7 +3,8 @@ import {  createSlice } from "@reduxjs/toolkit"
 const initialStateValue = {
     status: "idle",
     error: null,
-    userState: {email: "", password: ""}
+    userState: {email: "", password: ""},
+    
 }
 
 export const userSlice = createSlice({
@@ -22,10 +23,19 @@ export const userSlice = createSlice({
             state.value.userState = action.payload
             state.value.status = "success"
             console.log('state', state.value)
+        },
+        registerUser: (state, action) => {
+            state.value.userState = action.payload
+            state.value.status = "success"
+            console.log('state', state.value)
+        },
+        logoutUser: (state) => {
+            state.value.userState = initialStateValue.userState
+            state.value.status = "success"
         }
     }
 })
 
-export const { loginUser, userLoading, loginFailed } = userSlice.actions
+export const { loginUser, userLoading, loginFailed, logoutUser } = userSlice.actions
 
 export default userSlice.reducer

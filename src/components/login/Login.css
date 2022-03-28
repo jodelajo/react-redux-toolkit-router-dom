@@ -23,7 +23,7 @@
     margin-bottom: 10px;
 }
 
-.loginForm button {
+.button {
     width: 200px;
     height: 30px;
     border-radius: 4px;
@@ -31,11 +31,3 @@
     background-color: hotpink;
 }
 
-.welkom button{
-    margin-top: 10px;
-    width: 200px;
-    height: 30px;
-    border-radius: 4px;
-    border: none;
-    background-color: blue;
-}

@@ -4,12 +4,9 @@ import { useNavigate, useLocation} from 'react-router-dom'
 import { useDispatch} from "react-redux"
 import { login, userLoading, loginFailed } from '../../features/user'
 
-function LoginForm({submitLogin, email, setEmail, password,setPassword, submitRegister}) {
-    const dispatch = useDispatch()
-    const location = useLocation()
+function AuthForm({submitLogin, email, setEmail, password,setPassword, submitRegister}) {
     const {handleSubmit} = useForm();
 
-    console.log('location', location.pathname)
 
     // const submitHandler = () => {
     //     if (location.name === "/registreren") {
@@ -34,10 +31,10 @@ function LoginForm({submitLogin, email, setEmail, password,setPassword, submitRe
                 onChange={(e) => setPassword(e.target.value)}
                  required={true}
                 value={password} />
-                <button type="submit">Submit</button>
+                <button type="submit" className="button">Submit</button>
             </form>
         </div>
     )
 }
 
-export default LoginForm
+export default AuthForm
